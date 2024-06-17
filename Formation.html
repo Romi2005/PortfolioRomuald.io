@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romuald DJAHOUA</title>
+    <link rel="stylesheet" href="./FichierCSS/Formation.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Portfolio</div>
+        <!-- /*© Code by Romuald DN*/ -->
+        <div class="menu-toggle" id="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="Apropos.html">A propos de moi</a></li>
+                <li><a href="Experience.html">Expérience</a></li>
+                <li><a href="Formation.html">Formation</a></li>
+                <li><a href="Competence.html">Compétence</a></li>
+                <li><a href="Reference.html">Référence</a></li>
+                <li><a href="Portfolio.html">Portfolio</a></li>
+                <li><a href="Mecontacter.html">Me contacter</a></li>
+                <li><a href="./Photo/CV_Romuald_DJAHOUA_Alternance.pdf" target="_self">Mon CV</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="formation">
+            <div class="formation-item">
+                <img src="./Photo/IUT.png" width="10px" alt="Image 1">
+                <div class="formation-card">
+                    <h2>BUT 2 Science des Données</h2>
+                    <p>Depuis 2022 | France (Lisieux) </p>
+                    <p>Cette filière, le parcours Exploration et Modélisation Statistiques se concentre sur la collecte, le traitement et l'analyse statistique des données. Les étudiants acquièrent les compétences pour définir et recueillir des données pertinentes, choisir les outils statistiques adaptés, les utiliser pour analyser et modéliser les données, et présenter les résultats sous forme de rapports, tableaux et graphiques.</p>
+                </div>
+            </div>
+            <div class="formation-item">
+                <img src="./Photo/scienco.jpg" alt="Image 2">
+                <div class="formation-card">
+                    <h2>Baccalauréat scientifique</h2>
+                    <P>2021 - 2022 | Côte d'Ivoire</P><br>
+                    <p>Ce baccalauréat propose des séries principalement orientées vers les matières scientifiques telles que les Mathématiques, la Physique-Chimie et les Sciences de la Vie et de la Terre, qui sont fortement coefficientées. Cependant, il inclut également d'autres matières telles que le Français, la Philosophie, l'Anglais, etc.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.querySelector('.menu').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

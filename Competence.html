@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romuald DJAHOUA</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./FichierCSS/Competence.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">Portfolio</div>
+        <div class="menu-toggle" id="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="Apropos.html">A propos de moi</a></li>
+                <li><a href="Experience.html">Expérience</a></li>
+                <li><a href="Formation.html">Formation</a></li>
+                <li><a href="Competence.html">Compétence</a></li>
+                <li><a href="Reference.html">Référence</a></li>
+                <li><a href="Portfolio.html">Portfolio</a></li>
+                <li><a href="Mecontacter.html">Me contacter</a></li>
+                <li><a href="./Photo/CV_Romuald_DJAHOUA_Alternance.pdf" target="_self">Mon CV</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="carousel">
+            <div class="hideLeft">
+                <img src="./Photo/statistiques.png" alt="Image 1">
+            </div>
+            <div class="prev">
+                <img src="./Photo/database.png" alt="Image 2">
+            </div>
+            <div class="selected">
+                <img src="./Photo/Outils.png" alt="Image 3">
+            </div>
+            <div class="next">
+                <img src="./Photo/Vizualisation.png" alt="Image 4">
+            </div>
+            <div class="nextRightSecond">
+                <img src="./Photo/Autres.png" alt="Image 5">
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="prev">Précédent</button>
+            <button id="next">Suivant</button>
+        </div>
+    </main>
+    <script>
+        function moveToSelected(element) {
+            var selected;
+            if (element == "next") {
+                selected = $(".selected").next();
+            } else if (element == "prev") {
+                selected = $(".selected").prev();
+            } else {
+                selected = element;
+            }
+
+            var next = $(selected).next();
+            var prev = $(selected).prev();
+            var prevSecond = $(prev).prev();
+            var nextSecond = $(next).next();
+
+            $(selected).removeClass().addClass("selected");
+            $(prev).removeClass().addClass("prev");
+            $(next).removeClass().addClass("next");
+            $(nextSecond).removeClass().addClass("nextRightSecond");
+            $(prevSecond).removeClass().addClass("prevLeftSecond");
+
+            $(nextSecond).nextAll().removeClass().addClass('hideRight');
+            $(prevSecond).prevAll().removeClass().addClass('hideLeft');
+        }
+
+        // Eventos teclado
+        $(document).keydown(function(e) {
+            switch(e.which) {
+                case 37: // left
+                    moveToSelected('prev');
+                    break;
+                case 39: // right
+                    moveToSelected('next');
+                    break;
+                default: return;
+            }
+            e.preventDefault();
+        });
+
+        $('#carousel div').click(function() {
+            moveToSelected($(this));
+        });
+
+        $('#prev').click(function() {
+            moveToSelected('prev');
+        });
+
+        $('#next').click(function() {
+            moveToSelected('next');
+        });
+        
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.querySelector('.menu').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

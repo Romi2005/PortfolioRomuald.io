@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #1e3a8a, #2f4f4f);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+header {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+/* EFFET SUR LE TITRE PORTFOLIO*/
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes slide {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+}
+
+body {
+    background: linear-gradient(to right, #1e3a8a, #2f4f4f);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.logo {
+    font-size: 50px;
+    animation: fadeInOut 3s infinite, slide 3s infinite;
+    color: #f0f0f0; /* Couleur blanche cassée pour un bon contraste */
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+
+/* */
+
+
+/* */
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    position: relative;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+nav ul li::before,
+nav ul li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: #8d472e;
+    transition: width 0.3s ease;
+}
+
+nav ul li::before {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+nav ul li::after {
+    right: 50%;
+    transform: translateX(50%);
+}
+
+nav ul li:hover {
+    color: #e06320;
+    transform: scale(1.1);
+}
+
+nav ul li:hover::before,
+nav ul li:hover::after {
+    width: 100%;
+}
+
+
+/* */
+
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styles de base */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #1e3a8a, #2f4f4f);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+header {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+.logo {
+    font-size: 50px;
+    animation: fadeInOut 3s infinite, slide 3s infinite;
+    color: #f0f0f0;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    position: relative;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+nav ul li:hover {
+    color: #e06320;
+    transform: scale(1.1);
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 50px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+    width: 100%;
+}
+
+.form-group label {
+    display: block; 
+    margin-bottom: 15px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 2px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #e06320;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #d35400;
+}
+
+/* Styles du bouton hamburger */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* Styles spécifiques pour les petits écrans */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romuald DJAHOUA</title>
+    <link rel="stylesheet" href="./FichierCSS/Apropos.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Portfolio</div>
+        <!-- /*© Code by Romuald DN*/ -->
+        <div class="menu-toggle" id="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="Apropos.html">A propos de moi</a></li>
+                <li><a href="Experience.html">Expérience</a></li>
+                <li><a href="Formation.html">Formation</a></li>
+                <li><a href="Competence.html">Compétence</a></li>
+                <li><a href="Reference.html">Référence</a></li>
+                <li><a href="Portfolio.html">Portfolio</a></li>
+                <li><a href="Mecontacter.html">Me contacter</a></li>
+                <li><a href="./Photo/CV_Romuald_DJAHOUA_Alternance.pdf" target="_self">Mon CV</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <aside class="photo-section">
+            <img src="./Photo/maphotoe.jpg" alt="Photo de Romuald DJAHOUA">
+        </aside>
+        <div class="info-section">
+            <div class="presentation">
+                <h1><font color="#00008B">Présentation</font></h1>
+                <p>Je m'appelle DJAHOUA Nomel Lin Romuald, de nationalité ivoirienne. Résidant et étudiant en France depuis septembre 2022, j'ai obtenu <strong>un 
+                    baccalauréat scientifique</strong> en 2022. Animé par un fort intérêt pour <strong>l'informatique</strong> et les <strong>mathématiques</strong>, 
+                    j'ai choisi de poursuivre des études dans ce domaine. Actuellement en deuxième année de BUT Science des Données, je suis spécialisé en <strong>exploration et modélisation statistique</strong>. 
+                    Je vous invite à découvrir mon portfolio, qui présente mes compétences, mon parcours académique et professionnel, ainsi que mes divers projets.</p>
+            </div>
+            <div class="soft-skills">
+                <h2><font color="#4B0082">Soft Skills</font></h2>
+                <p>En tant qu'étudiant en science des données, j'ai développé des compétences clés telles que la pensée analytique, la résolution de problèmes, et la 
+                    communication claire de concepts complexes. J'excelle en collaboration et en gestion du temps, tout en faisant preuve de curiosité et d'adaptabilité.
+                     Mon esprit critique et éthique assure une utilisation responsable des données, tandis que ma créativité me permet de proposer des solutions innovantes.</p>
+            </div>
+            <div class="additional-section">
+                <h2><font color="#8B0000">Langues</font></h2>
+                <ul>
+                    <li>Français <img src="./Photo/France.png" width="20px" alt=""></li>
+                    <li>Anglais <img src="./Photo/Britanique.png" width="20px" alt=""></li>
+                    <li>Nouchis (argot ivoirien) <img src="./Photo/Ivoirien.png" width="20px" alt=""></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.querySelector('.menu').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

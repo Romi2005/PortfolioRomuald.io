@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Overpass:100,100i,200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./FichierCSS/Experience.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Portfolio</div>
+        <!-- /*© Code by Romuald DN*/ -->
+        <div class="menu-toggle" id="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="Apropos.html">A propos de moi</a></li>
+                <li><a href="Experience.html">Expérience</a></li>
+                <li><a href="Formation.html">Formation</a></li>
+                <li><a href="Competence.html">Compétence</a></li>
+                <li><a href="Reference.html">Référence</a></li>
+                <li><a href="Portfolio.html">Portfolio</a></li>
+                <li><a href="Mecontacter.html">Me contacter</a></li>
+                <li><a href="./Photo/CV_Romuald_DJAHOUA_Alternance.pdf" target="_self">Mon CV</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="carousel">
+            <div class="slides">
+                <div class="slide">
+                    <img src="./Photo/FINAFRICA.jpg" width="200px" height="80px" alt="Expérience 1">
+                    <div class="description">
+                        <h2>Stagiaire en Analyse Statistique | Première Agence de Micro-Finance (PAMF) | Côte d'Ivoire</h2>
+                        <p>Développer un système de notation pour évaluer le profil de risque des clients, afin d'optimiser la gestion des risques.
+                            Mettre en place des tableaux de bord pour assurer le suivi des indicateurs clés.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="./Photo/BK.png" width="100px" height="80px" alt="Expérience 2">
+                    <div class="description">
+                        <h2>Agent Polyvalent | Burger King | France - Lisieux</h2>
+                        <p>En tant qu'agent polyvalent chez Burger King (BK), j'assurais un service client de qualité en prenant les commandes avec précision et en fournissant un service rapide au comptoir et au drive. J'étais également responsable de la préparation des repas selon les normes de l'entreprise et du maintien de la propreté du restaurant, tout en gérant efficacement les stocks et en participant aux sessions de formation pour améliorer mes compétences.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+            <button class="next" onclick="plusSlides(1)">&#10095;</button>
+        </div>
+    </main>
+    <script>
+        let slideIndex = 0;
+        showSlides(slideIndex);
+    
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+    
+        function showSlides(n) {
+            const slides = document.querySelectorAll('.slide');
+            if (n >= slides.length) { slideIndex = 0 }
+            if (n < 0) { slideIndex = slides.length - 1 }
+            slides.forEach(slide => {
+                slide.style.transform = `translateX(${-slideIndex * 100}%)`;
+            });
+        }
+
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.querySelector('.menu').classList.toggle('active');
+        });
+        
+    </script>
+    
+</body>
+</html>
